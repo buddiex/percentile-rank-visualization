@@ -1,0 +1,13 @@
+flask
+flask_simplelogin
+pandas
+bokeh == 0.12.10 
+xlrd >= 0.9.0
+flask-sqlalchemy
+Flask-Admin
+Flask-Security>=1.7.5
+Flask-Login>=0.3.0
+Flask-Excel
+pyexcel-xls
+pyexcel-xlsx
+

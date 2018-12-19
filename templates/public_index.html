@@ -1,0 +1,48 @@
+{% extends 'public_master.html' %}
+{% block page_body %}
+          <article class="grid_5 alpha" id="leftnavcontainer"><a id="leftnavcontent"></a>
+
+                                <div id="cssmenu">
+                                    <ul id="sidesearch">
+                                    {% for kp in kpis %}
+                                        <li><a href="{{url_for('kpi_graph', kpi_id=kp.id)}}"><span>{{kp.name}}</span></a></li>
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+                                <div id="leftcol_belownav">
+                                    <!--Left column content below navigation-->
+                                </div>
+                            </article>
+
+    <article class="grid_18 prefix_0 p21">
+        <div id="leftcol_mobileview">
+            <!--Left column content below navigation-->sdasdas
+        </div>
+        <div class="row-fluid">
+            <form action="{{url_for('kpi_graph', kpi_id=kpi_id)}}"   method="post"  class="form-inline">
+                {% for field, errors in form.errors.items() %}
+                <div class="alert alert-error">
+                    {{ form[field].label }}{{ ', '.join(errors) }}
+                </div>
+                {% endfor %}
+                <div class="form-group">
+                    {{ form.csrf_token }}
+                    <select id="county" name="county" class="selectpicker show-tick show-menu-arrow" data-live-search="true" >
+                        <option selected>Select county...</option>
+                        {% for subfield in form.county %}
+                            {{ subfield }}
+                        {% endfor %}
+                    </select>
+                    {{ form.year(class_="form-control",placeholder="Y")}}
+                    <input type="submit" value="Search">
+                </div>
+
+            </form>
+        </div>
+        <div class="row-fluid">
+            <br>
+            {{ div|safe }}
+            {{ script|safe }}
+        </div>
+    </article>
+{% endblock %}

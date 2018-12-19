@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>Biostat_epidemiology
+Biostatistics and Epidemiology
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <title>Biostatistics and Epidemiology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="../static/home_files/skeleton.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/superfish-etsu.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/responsive-tabs.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/smk-accordion.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/jquery_002.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/jquery.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/ie.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/home_files/leftnav.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../static/home_files/local.css">
+    <link rel="icon" href="http://www.etsu.edu/cmsroot/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.etsu.edu/cmsroot/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed"
+          href="http://www.etsu.edu/_resources14/templateimages/icons/etsuhomebutton_144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="http://www.etsu.edu/_resources14/templateimages/icons/etsuhomebutton_72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="http://www.etsu.edu/_resources14/templateimages/icons/etsuhomebutton_114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="http://www.etsu.edu/_resources14/templateimages/icons/etsuhomebutton_144.png">
+    <script async="" src="../static/home_files/analytics.js"></script>
+    <script async="" src="../static/home_files/analytics_002.js"></script>
+    <script src="../static/home_files/jquery-1.js"></script>
+    <script src="../static/home_files/superfish.js"></script>
+    <script src="../static/home_files/jquery.js"></script>
+    <script src="../static/home_files/smk-accordion.js"></script>
+    <script src="../static/home_files/jquery_004.js"></script>
+    <script src="../static/home_files/leftnav.js"></script>
+    <script src="../static/home_files/jquery_003.js"></script>
+    <script src="../static/home_files/max-height.js"></script>
+    <script src="../static/home_files/script.js"></script>
+    <script src="../static/home_files/searchfunctions.js"></script>
+    <script src="../static/home_files/sidepanels.js"></script>
+    <script src="../static/home_files/directedit.js"></script>
+    <script src="../static/home_files/js.js"></script>
+    <link rel="stylesheet" href="../static/home_files/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_files/flex-caption.css" type="text/css">
+    <script src="../static/home_files/jquery_005.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.flexslider').flexslider({
+                animation: 'slide',
+                slideshowSpeed: 7000,
+                animationSpeed: 1000,
+                prevText: "", <!--Removed the "Previous" and "Next" text from under the arrows in the FlexSlider-->
+                nextText: ""
+            });
+        });
+
+    </script>
+    <link rel="stylesheet" href="../static/home_files/bootstrap-thumbnails.css">
+    <link rel="stylesheet" href="../static/home_files/prettyPhoto.html" type="text/css" media="screen"
+          title="prettyPhoto main stylesheet">
+    <script src="../static/home_files/jquery_002.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a[data-gal^='prettyPhoto']").prettyPhoto();
+        });
+    </script>
+    <script type="text/javascript">
+        window.global_path_var = " site:http://www.etsu.edu/cph/biostat_epidemiology/";
+        //window.global_path_var =" site:http://www.etsu.edu/finaid ";
+        $(document).ready(function () {
+            directedit();
+            curryear();
+            emailob();
+            activate_sidepanels();
+            start_tabs();
+            start_modals();
+            setup_faq_filter();
+            start_accord();
+            var example = $('#example').superfish({});
+
+            /********* onClick Event for Site Search - desktop view over left nav **********/
+            $('form#deptsearch').submit(function () {
+
+                $('#deptsearch #q').val(($('#deptsearch #q').val() + global_path_var));
+            });
+            // add onsubmit script for mobile site search to side panel
+            $('form#mobile_dsearch').submit(function () {
+
+                var inputvalue = $('form#mobile_dsearch #q_mob').val();
+
+                $('form#mobile_dsearch #q_mob').val(($('form#mobile_dsearch #q_mob').val() + global_path_var));
+                // set id of input text box to "q" so that it will work for ETSU search string.  "q" is search param name
+                $("div#mobilenavpanel ul li form#mobile_dsearch input#q_mob").attr("id", "q");
+                $("div#mobilenavpanel ul li form#mobile_dsearch input#q").attr("name", "q");
+            })
+
+        }); //end document ready function
+
+    </script>
+    <!--[if lt ie 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+		<a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+		<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="you are using an outdated browser. for a faster, safer browsing experience, upgrade for free today." />
+		</a>
+		</div>
+		<![endif]-->
+    <!--[if lt ie 9]>
+		<script src="/_resources14/js/html5.js"></script>
+		<link rel="stylesheet" href="/_resources14/css/ie.css">
+		<![endif]-->
+    <style type="text/css">
+        #hidden {
+            display: none;
+        }
+    </style><!-- Hotjar Tracking Code for http://www.etsu.edu -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                        (h.hj.q = h.hj.q || []).push(arguments)
+                    };
+            h._hjSettings = {hjid: 507129, hjsv: 5};
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <script async="" src="../static/home_files/hotjar-507129.js"></script>
+    <!--Google Analytics Code-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-6136118-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="../static/home_files/satelliteLib-ef18f968f048ca99a71ee548f80e9ac5996c3b1a.js">&</script>
+    <script async="" src="../static/home_files/modules-33471959813a5b6daf555d491fc2c31d.js"></script>
+    <style type="text/css">iframe#_hjRemoteVarsFrame {
+        display: none !important;
+        width: 1px !important;
+        height: 1px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }</style>
+
+
+    {#    {% block head %}#}
+    {#        <!-- TODO: use url_for here: -->#}
+    {#        <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">#}
+    {#    {% endblock %}#}
+
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" rel="stylesheet" type="text/css">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.10.min.css" rel="stylesheet" type="text/css">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.10.min.css" rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.10.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.10.min.js"></script>
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.js"></script>
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-compiler-0.12.10.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+
+<body>
+<div id="mobilemainpanel" class="mm-menu mm-vertical mm-offcanvas mm-right mm-front">
+    <ul class="list-login mm-list mm-panel mm-opened mm-current" id="mm-0">
+        <li class="top_nav_items alertnav"><a id="alertlink" href="http://www.etsu.edu/alert" title="Advisories">Advisories</a>
+        </li>
+        <li class="top_nav_items goldlinknav"><a title="goldlink" href="https://goldlink.etsu.edu/cas/">GoldLink</a>
+        </li>
+        <li class="top_nav_items goldlinknav"><a title="email" href="https://webmail.etsu.edu/">eMail</a></li>
+        <li class="top_nav_items needhelpnav"><a title="d2l" href="http://elearn.etsu.edu/">D2L</a></li>
+        <li class="top_nav_items safetynav"><a title="safety on campus" href="http://www.etsu.edu/safety/">Safety</a>
+        </li>
+        <li class="top_nav_items azindexnav"><a title="a to z index" href="http://www.etsu.edu/etsu/az.asp">A-Z
+            Index</a></li>
+    </ul>
+</div>
+<div id="mobilenavpanel" class="mm-menu mm-vertical mm-offcanvas mm-front">
+    <ul id="sidesearch" class="mm-list mm-panel mm-opened mm-current">
+
+        <li><a href="http://www.etsu.edu/cph/biostat_epidemiology/default.php"><span>Home</span></a></li>
+        <li><a href="http://www.etsu.edu/cph/default.php"><span>CPH Home</span></a></li>
+        <li><a href="http://www.etsu.edu/cph/biostat_epidemiology/about.php"><span>Department News</span></a></li>
+        <li><a href="http://www.etsu.edu/cph/biostat_epidemiology/faculty-staff/default.php"><span>Faculty</span></a>
+        </li>
+        <li><a href="http://www.etsu.edu/cph/biostat_epidemiology/degrees.php"><span>Degrees</span></a></li>
+        <li><a href="http://www.etsu.edu/cph/biostat_epidemiology/mch_symposium.php"><span>Maternal and Child Health Research Collaborative</span></a>
+        </li>
+        <li>
+            <a href="http://www.etsu.edu/cph/biostat_epidemiology/tnstroke.php"><span>Tennessee Stroke Registry</span></a>
+        </li>
+        <li><a href="http://www.etsu.edu/cph/careers.php" target="_blank"><span>Careers in Public Health</span></a></li>
+        <li>
+            <a href="http://www.etsu.edu/cph/biostat_epidemiology/scholarly_activities.php"><span>Scholarly Activities</span></a>
+        </li>
+        <li><a href="http://www.etsu.edu/cph/biostat_epidemiology/contactus.php"><span>Contact Us</span></a></li>
+    </ul>
+    <!-- ouc:editor csspath="/_resources14/ou/editor/sidenav.css" cssmenu="/_resources14/ou/editor/sidenav.txt" width="798"/ -->
+</div>
+<div class="mm-page mm-slideout">
+    <div id="pagewrapper">
+        <p class="skipto"><a href="#maincolcontent" title="skip to main column content">skip to main content
+            column</a><a href="#leftnavcontent" title="skip to left navigation">skip to left navigation</a></p>
+        <header>
+            <div class="row-top">
+                <div class="main oveflow">
+                    <div id="mobile_top_nav">
+                        <img src="../static/home_files/logo_mobile.png" alt="ETSU Logo" style="float:left;">
+                        <ul class="">
+                            <li id="site_search_mobile_left"><a href="#mobilenavpanel">Site Search&nbsp;&nbsp;<img
+                                    src="../static/home_files/search_button.png" alt="search this site"></a></li>
+                            <li id="site_search_mobile_right"><a href="#mobilemainpanel">ETSU Search&nbsp;&nbsp;<img
+                                    src="../static/home_files/search_button.png" alt="search all of ETSU"></a></li>
+
+                        </ul>
+                    </div>
+                    <div id="search" class="searchetsubox">
+                        <div class="rowelem">
+                            <form id="etsusearch" data-ajax="false" name="etsusearch" action="/search" method="get">
+                                <label for="q">ETSU Search Terms</label>
+                                <input id="q" name="q" onclick="ClearSrchBox('etsusearch')"
+                                       onblur="ResetSrchBox('etsusearch')" maxlength="35"
+                                       placeholder="search etsu and people" title="ETSU Search Input Box" type="text">
+                                <label class="acctext" for="imgetsusrch">Submit ETSU search</label>
+                                <input id="imgetsusrch" name="imgetsusrch" src="../static/home_files/searchbtn.png"
+                                       alt="search etsu" type="image"></form>
+                        </div><!-- end class rowelem -->
+                    </div><!--end searchetsubox -->
+                    <div id="top_nav">
+
+                        <ul class="list-login">
+                            <li class="top_nav_items alertnav"><a id="alertlink" href="http://www.etsu.edu/alert"
+                                                                  title="Advisories">Advisories</a></li>
+                            <li class="top_nav_items goldlinknav"><a title="goldlink"
+                                                                     href="https://goldlink.etsu.edu/cas/">GoldLink</a>
+                            </li>
+                            <li class="top_nav_items goldlinknav"><a title="email" href="https://webmail.etsu.edu/">eMail</a>
+                            </li>
+                            <li class="top_nav_items needhelpnav"><a title="d2l" href="http://elearn.etsu.edu/">D2L</a>
+                            </li>
+                            <li class="top_nav_items safetynav"><a title="safety on campus"
+                                                                   href="http://www.etsu.edu/safety/">Safety</a></li>
+                            <li class="top_nav_items azindexnav"><a title="a to z index"
+                                                                    href="http://www.etsu.edu/etsu/az.asp">A-Z Index</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="row-logo-nav">
+                <div class="main">
+                    <h1><a id="etsulogo" href="http://www.etsu.edu/etsuhome/default.aspx" title="ETSU Homepage">ETSU
+                        Homepage</a></h1>
+
+                    <h3 class="sitesubheading">College of Public Health</h3>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </header>
+        <section id="content">
+            <div class="top-shadow"></div>
+            <div class="container_24">
+                <div id="infoblock" class="main">
+                    <div class="row-1">
+                        <div id="headingmenuwrapper" class="wrapper">
+                            <div id="headingmenurow" class="border-horiz a"><span>Health Stats Rankings</span>
+                            </div>
+                        </div>
+                        <div class="wrapper border-vert a">
+
+
+                            <a id="maincolcontent"></a>
+
+                            {% block page_body %}
+
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside id="asidelinks">
+                <div id="linksblock" class="container_24">
+                    <article class="grid_6">
+                        <!-- com.omniupdate.editor csspath="/_resources14/ou/editor/maincontent.css" cssmenu="/_resources14/ou/editor/maincontent.txt" -->
+                        <p style="border-bottom: 1px solid #7790ab">
+                            Department of Biostatistics and Epidemiology<br>149 Lamb Hall | PO Box 70623 <br> Johnson
+                            City, TN 37614 <br> Tel.: 423-439-4477
+                        </p>
+                        <script>
+                            (function (i, s, o, g, r, a, m) {
+                                i['GoogleAnalyticsObject'] = r;
+                                i[r] = i[r] || function () {
+                                            (i[r].q = i[r].q || []).push(arguments)
+                                        }, i[r].l = 1 * new Date();
+                                a = s.createElement(o),
+                                        m = s.getElementsByTagName(o)[0];
+                                a.async = 1;
+                                a.src = g;
+                                m.parentNode.insertBefore(a, m)
+                            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                            ga('create', 'UA-20972766-1', 'auto', {'name': 'newTracker'});
+                            ga('newTracker.send', 'pageview');
+                        </script>
+                        <p style="padding-top: 20px;">East Tennessee State University<br>
+                            PO Box 70300 | Johnson City, TN 37614<br>
+                            423-439-1000 | <a href="mailto:info@etsu.edu">info@etsu.edu</a>
+                        </p>
+                    </article>
+                    <article id="socialicons" class="grid_6" style="float:right;">
+                        <ul id="hpicon_container">
+                            <li><a href="http://instagram.com/etsu/" title="ETSU instagram" target="_blank"><img
+                                    class="hpicons" src="../static/home_files/img_instagramlogo.png"
+                                    alt="ETSU instagram" title="ETSU instagram"></a></li>
+                            <li><a href="https://twitter.com/ETSUCPH" title="College of Public Health Twitter"
+                                   target="_blank"><img id="twittericon" class="hpicons"
+                                                        src="../static/home_files/img_twitterlogo.png"
+                                                        alt="College of Public Health Twitter"
+                                                        title="College of Public Health Twitter"></a></li>
+                            <li><a href="https://www.facebook.com/ETSU-College-of-Public-Health-50859968217/"
+                                   title="College of Public Health Facebook" target="_blank"><img class="hpicons"
+                                                                                                  src="../static/home_files/img_facebooklogo.png"
+                                                                                                  alt="College of Public Health Facebook"
+                                                                                                  title="College of Public Health Facebook"></a>
+                            </li>
+                            <li><a href="http://www.youtube.com/user/EastTennesseeState" title="ETSU You Tube"
+                                   target="_blank"><img class="hpicons" src="../static/home_files/img_youtubelogo.png"
+                                                        alt="ETSU You Tube" title="ETSU You Tube"></a></li>
+                        </ul>
+                        <ul id="hpicon_container2">
+                            <li>
+                                <a href="http://itunes.apple.com/institution/east-tennessee-state-university/id384928061#ls=1"
+                                   title="ETSU iTunesU" target="_blank"><img class="hpicons"
+                                                                             src="../static/home_files/img_itunesu.png"
+                                                                             alt="ETSU iTunesU"
+                                                                             title="ETSU iTunesU"></a></li>
+                            <li><a href="http://etsuphotoservices.smugmug.com/" title="ETSU smugmug"
+                                   target="_blank"><img class="hpicons" src="../static/home_files/img_smugmuglogo.png"
+                                                        alt="ETSU smugmug" title="ETSU smugmug"></a></li>
+                            <li><a href="http://www.flickr.com/photos/79277024@N07/" title="ETSU flickr"
+                                   target="_blank"><img class="hpicons" src="../static/home_files/img_flickrlogo.png"
+                                                        alt="ETSU flickr" title="ETSU flickr"></a></li>
+                        </ul>
+                    </article>
+                </div>
+            </aside>
+        </section>
+    </div>
+    <div id="mobilenav">
+        <a href="#mobilenavpanel"><img src="../static/home_files/bars1.png" alt="icon for left menu"
+                                       style="padding-left:10px;width:44px;"></a>
+        <a href="#mobilemainpanel"><img src="../static/home_files/more.png" alt="icon for right menu"
+                                        style="float:right; padding-right:10px;width:44px;"></a>
+    </div>
+</div>
+<footer>
+    <div class="main">
+        <div class="privacy"><span>East Tennessee State University</span>&nbsp;<span id="directedit">
+            <!-- com.omniupdate.ob --><a id="de"
+                                         href="http://a.cms.omniupdate.com/10?skin=etsu&amp;account=east-tennessee-state&amp;site=ETSU_Web_Linux&amp;action=de&amp;path=/cph/biostat_epidemiology/default.pcf"
+                                         style="text-decoration:none;">©</a><!-- /com.omniupdate.ob -->
+         </span>&nbsp; <span id="year">2017</span>&nbsp; All Rights Reserved &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; <a
+                href="http://www.etsu.edu/etsuhome/documents/webprivacystatement.pdf">Privacy Policy</a>
+        </div>
+    </div>
+    <div id="hidden"></div>
+</footer>
+<script src="../static/home_files/footerscripts.js"></script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+<iframe style="display: none;" src="../static/home_files/satellite-5812067964746d5fda00b5ec.html"></iframe>
+<div id="mm-blocker" class="mm-slideout"></div>
+<iframe style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
+        name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame"
+        src="../static/home_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html"></iframe>
+<div id="ads"></div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* base styles */
+#cssmenu,#cssmenu ul,#cssmenu li,#cssmenu a,
+.mm-menu,.mm-menu ul,.mm-menu li,.mm-menu a
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  /*font-family: "sorts italic", georgia, serif;
+   font-family: 'sorts regular', georgia, serif;
+  font-size: 14px; */
+  position: relative;
+}
+#cssmenu {
+  width: 175px;
+  border-right: 1px solid #dedede;
+  /**
+  border-right: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  **/
+  padding-right: 15px;
+}
+#cssmenu a, .mm-menu a{
+  line-height: 1.3;
+}
+
+
+#cssmenu > ul > li > a,
+.mm-menu > ul > li > a
+{
+  font-size: 1em;
+  display: block;
+  color: #002146;
+  border-top: 1px solid #dedede;
+  width: 95%;
+}
+#cssmenu > ul > li:first-child > a,
+.mm-menu > ul > li:first-child > a {border-top: none !important;}
+#cssmenu > ul > li > a > span,
+.mm-menu > ul > li > a > span{
+  display: block;
+  padding: 12px 15px 12px 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1.05em;
+}
+#cssmenu > ul > li > form.navsearchbox,
+.mm-menu > ul > li > form.navsearchbox {
+  display: block;
+  padding: 12px 2px 12px 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1.35em;
+}
+#sitesearchbutton{padding: 5px 0 0 0px;}
+.navsearchbox input[type="text"]
+{color:#715627;
+	font-size:12px;
+	margin:0;
+	outline: none;
+	resize:none;
+	position:relative;
+	-webkit-background-clip:padding-box;
+	border: 1px solid #aaa;
+	 box-shadow: none;
+	border-radius:0;
+	background-color:#eee;
+	padding:6px 10px 7px;
+    height:14px;
+	width:120px; 
+	margin-right: 5px;}
+#cssmenu > ul > li > a:hover,
+.mm-menu > ul > li > a:hover{
+  text-decoration: underline;
+}
+#cssmenu > ul > li.active,
+.mm-menu > ul > li.active{
+  border-bottom: none;
+}
+#cssmenu > ul > li.has-sub > a span
+{
+  background: url(/cmsroot/menu_images/downarrowblue.png) 95% center no-repeat;
+}
+#cssmenu > ul > li.has-sub.active > a span
+{
+  background: url(/cmsroot/menu_images/uparrowblue.png) 95% center no-repeat;
+}
+#cssmenu > ul > li > a[target="_blank"] > span,
+.mm-menu > ul > li > a[target="_blank"] > span{ 
+background: url(/cmsroot/outemplateimages/icon_newwindow_gray.png) 97% center no-repeat;
+ }
+ #cssmenu > ul  ul  li  a[target="_blank"],
+ .mm-menu > ul  ul  li  a[target="_blank"]{ 
+background: url(/cmsroot/outemplateimages/icon_newwindow_gray.png) right center no-repeat;}
+#cssmenu ul ul,
+.mm-menu ul ul{
+  display: none;
+  background: #fff;
+  
+}
+#cssmenu > ul  ul  li  a:hover,
+.mm-menu > ul  ul  li  a:hover{
+  text-decoration: underline;
+}
+#cssmenu ul ul li,
+{
+  padding: 0;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: none;
+  background: #fff;
+ 
+}
+#cssmenu ul ul li:last-child,
+.mm-menu ul ul li:last-child{
+  border-bottom: none;
+}
+#cssmenu ul ul a,
+.mm-menu ul ul a {
+  padding: 10px 20px 10px 30px;
+  display: block;
+  color: #002147;
+  font-size: 1em;
+  font-weight: normal;
+}
+#cssmenu ul ul a:before,
+.mm-menu ul ul a:before{
+  content: '\00bb';
+  position: absolute;
+  left: 15px;
+  color: #ffc82e;
+  font-size: 18px;
+  top: 5px;
+}
+#cssmenu ul ul a:hover,
+.mm-menu ul ul a:hover{
+  color: #002147;
+}
+
+@media only screen and (max-width: 995px) {
+	#cssmenu {width: 145px;}
+	.navsearchbox input[type="text"] {width: 90px;}
+}
+@media only screen and (max-width: 767px) {
+.navsearchbox input[type="text"], #etsusearch input[type="text"] {width: 80%;}
+		
+}

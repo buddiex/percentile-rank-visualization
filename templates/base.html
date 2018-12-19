@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Health Ranking {% endblock %}</title>
+    {% block head %}
+        <!-- TODO: use url_for here: -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    {% endblock %}
+
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css" rel="stylesheet" type="text/css">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.css" rel="stylesheet" type="text/css">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.css" rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.js"></script>
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-compiler-0.13.0.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">My Site</a>
+    {% block nav %}
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('create_kpi') }}">Create Health Kpi</a>
+                </li>
+
+            <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('upload_stats') }}">Upload Health Kpi Stats</a>
+                </li>
+
+                <li class="nav-item nav navbar-nav pull-left">
+                    {% if is_logged_in() %}
+                        <span class="nav-link">{{ get_username() }}
+                        <a href="{{ url_for('simplelogin.logout') }}"> Logout</a></span>
+                    {% else %}
+                        <a class="nav-link" href="{{ url_for('simplelogin.login') }}">Login</a>
+                    {% endif %}
+                </li>
+
+            </ul>
+        </div>
+    {% endblock %}
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        {% block messages %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flashes alert">
+                        {% for category, message in messages %}
+                            <li class="flashes alert alert-{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {% if request.path == url_for('simplelogin.login') %}
+                        <ul class="flashes alert alert-primary">
+                            <li>Please provide username and password to login</li>
+                        </ul>
+                    {% endif %}
+                {% endif %}
+            {% endwith %}
+        {% endblock %}
+    </div>
+</div>
+
+<div class="container">
+    {% block page_body %}
+        <div class="row">
+            <p>
+                Content comes here!
+            </p>
+        </div>
+    {% endblock %}
+</div>
+
+<div class="container">
+    <footer>
+        {% block footer %}
+            <address>
+                <a href="#">Team LuvBug</a> | Systems Engineering Term Project | Copyright 2017
+            </address>
+        {% endblock %}
+    </footer>
+</div>
+
+{% block tail %}{% endblock %}
+</body>
+</html>

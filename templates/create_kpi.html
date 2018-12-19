@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Createdd Kpi{% endblock %}
+
+{% block page_body %}
+  <h1>Create Kpi</h1>
+  </form>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+                    <form action="{{ url_for('create_kpi') }}" method="post"  class="form-horizontal">
+                      {{ form.hidden_tag() }}
+                      {% for field in form.errors %}
+                            {% for error in form.errors[field] %}
+                                <div class="alert alert-error">
+                                    <strong>Error!</strong> {{error}}
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                        {{form.name.label(style ="text-transform:uppercase")}}
+                          <div class="form-control">{{ form.name(class_="form-control", placeholder="name") }}</div>
+                         {{form.description.label(style ="text-transform:uppercase")}}
+                          <div class="form-control">{{ form.description( cols="35", rows="20", class_="form-control", placeholder="description") }}</div>
+                    <button type="submit" class="btn btn-default">
+									Add
+								</button>
+                  </form>
+
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

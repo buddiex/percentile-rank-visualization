@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"></head><body>
+    <script>
+      (function(){
+        function escapeForHtml(str){
+          if (!str) return str
+          return str
+            .replace(/\&/g, '&amp;')
+            .replace(/\</g, '&lt;')
+            .replace(/\>/g, '&gt;')
+            .replace(/\"/g, '&quot;')
+            .replace(/\'/g, '&#x27;')
+            .replace(/\//g, '&#x2F;')
+        }
+
+        var regexChars = /[.*+?^${}()|[\]\\]/g;
+        function escapeForRegex(str) {
+          return str.replace(regexChars, "\\$&");
+        }
+
+        function parseQueryString(){
+          var ret = {}, parts = location.search.substring(1).split('&');
+          for (var i = parts.length; i--;) {
+            var vardef = parts[i].split('='), varname = vardef[0], value = vardef[1];
+            ret[varname] = unescape(value);
+          }
+          return ret;
+        }
+
+        var queryParams = parseQueryString();
+
+        var markup = "<script async src=\"https://i.simpli.fi/dpx.js?cid=56157&action=100&segment=mvagid25202_East_Tennessee_State_Univ._College_Of_Ph&m=1\"></scr"+"ipt>";
+
+        for (var name in queryParams){
+          var regex = new RegExp('%' + escapeForRegex(name) + '%', 'ig');
+          markup = markup.replace(regex, 
+            escapeForHtml(queryParams[name]));
+        }
+
+        document.write(markup)
+      })();
+    </script><script async="" src="satellite-5812067964746d5fda00b5ec_data/dpx.js" data-sifi-parsed="true"></script>
+  
+
+<script src="satellite-5812067964746d5fda00b5ec_data/p"></script></body></html>

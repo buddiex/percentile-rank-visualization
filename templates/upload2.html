@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+{% block title %}Upload Stats{% endblock %}
+
+{% block page_body %}
+    <div class="row">
+        <form action="{{ url_for('kpi_upload') }}" method="post"  class="form-inlines">
+            <h2>Upload Stats</h2>
+            <div class="form-group">
+            {{ form.csrf_token }}
+{#            {{form.username.label(style ="text-transform:uppercase")}}#}
+                <div class="form-control">{{ form.kpi_name(class_="form-control", placeholder="Name") }}</div>
+{#            {{form.password.label(style ="text-transform:uppercase")}}#}
+                <div class="form-control"> {{ form.year(class_="form-control",placeholder="Y")}}</div>
+                <div class="form-control"> {{ form.file(class_="form-control",placeholder="File")}}</div>
+{#            {% if next %}<input type="hidden" name="next" value="{{next}}">{% endif %}#}
+           <input class="btn btn-lg btn-primary btn-block" type="submit" value="Send">
+            </div>
+       </form>
+    </div>
+{% endblock %}

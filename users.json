@@ -1,0 +1,1 @@
+{"username": "", "password": "", "admin": {"username": "admin", "password": "pbkdf2:sha256:50000$aYSGjEHt$7a56bcff1534018ac2023207761d3bb68bd12298e1291a59742dd06b0724db43"}, "osas": {"username": "osas", "role": "user", "password": "pbkdf2:sha256:50000$rFw3Xjog$c12c90de10b80eb6507f82b2462d3231c3df520d6b7d5e0508c7c0d578360cc3"}}
