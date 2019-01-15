@@ -1,4 +1,4 @@
-# Flask Simple Login Examples
+# Percentile rank visualization
 
 This is a class project for my schools Public health department. 
 It is a Flask application that uses pandas and bokeh to plot a pecentile range graphs from excel sheets
